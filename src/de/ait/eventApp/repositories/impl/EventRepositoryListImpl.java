@@ -24,7 +24,7 @@ public class EventRepositoryListImpl implements EventRepository {
 
     @Override
     public void updateById(Long id) {
-
+//        findById(id).setDescription();
     }
 
     @Override

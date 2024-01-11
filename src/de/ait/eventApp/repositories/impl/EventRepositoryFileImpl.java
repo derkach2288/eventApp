@@ -45,7 +45,10 @@ public class EventRepositoryFileImpl implements EventRepository {
 
     @Override
     public Event findById(Long id) {
-        return null;
+
+        return findAll().stream().filter(event -> event.getId()==id)
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
