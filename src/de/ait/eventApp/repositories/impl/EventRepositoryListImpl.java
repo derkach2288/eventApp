@@ -12,8 +12,8 @@ public class EventRepositoryListImpl implements EventRepository {
     private Long generateId = 1L;
     @Override
     public void save(Event event) {
-        events.add(event);
         event.setId(generateId);
+        events.add(event);
         generateId++;
     }
 
