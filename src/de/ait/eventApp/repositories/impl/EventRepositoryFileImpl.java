@@ -35,12 +35,11 @@ public class EventRepositoryFileImpl implements EventRepository {
 
     @Override
     public void deleteById(Long id) {
-
+        findAll().removeIf(event -> event.getId()==id);
     }
 
     @Override
     public void updateById(Long id) {
-
     }
 
     @Override
